@@ -1,0 +1,5 @@
+msgid "plugins.generic.mathJax.displayName"
+msgstr "MathJax"
+
+msgid "plugins.generic.mathJax.description"
+msgstr "This plugin adds support for MathJax."
