@@ -79,7 +79,7 @@ class MathJaxPlugin extends GenericPlugin {
         }, $input);
 
         // Inline Math attempt
-        $re = '/[\$\[\(].+[\$\]\)]/m';
+        $re = '/(\$|\\\\\(|\\\\\[).+(\$|\\\\\)|\\\\\])/m';
         if(preg_match($re, $input)) {
             $this->addMathJax();
         }
@@ -99,8 +99,8 @@ window.MathJax = {
     elements: ['div.tex2jax_process'],
   },
   tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    inlineMath: [['$', '$'], ['\\\(', '\\\)']],
+    displayMath: [['$$', '$$'], ['\\\[', '\\\]']],
     processEscapes: true,
     tags: 'ams'
   },
